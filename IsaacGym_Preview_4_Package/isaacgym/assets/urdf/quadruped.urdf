@@ -121,11 +121,11 @@
 		</inertial>
 	</link>
 	
-	<joint name="joint-base-chassis" type="fixed">
+	<!-- <joint name="joint-base-chassis" type="fixed">
 		<parent link="base_link"/>
 		<child link="chassis-link"/>
 		<origin xyz="0 0 0.03" rpy="0 0 0" />
-	</joint>	
+	</joint>	 -->
 	
 	<joint name="joint-chassis-front-right-wheel" type="fixed">
 		<parent link="chassis-link"/>

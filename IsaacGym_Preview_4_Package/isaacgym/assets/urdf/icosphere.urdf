@@ -43,7 +43,7 @@
 			<poissons value="0.36"/>
 			<damping value="0.0"/>
 			<attachDistance value="0.0"/>
-			<tetmesh filename="body_v2.tet"/>
+			<tetmesh filename="deneme.tet"/>
 			<scale value="0.01"/>
 		</fem>
 	</link>
