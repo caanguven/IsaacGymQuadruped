@@ -39,30 +39,30 @@
     <!-- Custom body link -->
     <link name="chassis-link">
          <fem>
-		    <origin xyz="0.06 -0.06 0" rpy="0 -1.57079 0" />
+		    <origin xyz="0.06 -0.015 -0.06" rpy="0 -1.57079 0" />
             <density value="1040"/>
             <youngs value="1.2e7"/>
             <poissons value="0.36"/>
             <damping value="0.0"/>
             <attachDistance value="0.5"/>
             <tetmesh filename="body_v2.tet"/>
-            <scale value="0.001"/>
+            <scale value="0.001"/> 
         </fem>
     </link>
 
 
     <link name="rigid-part-front-left">
         <visual>
-            <origin xyz="0.06 -0.06 0" rpy="0 0 0" />
+            <origin xyz="0.01 -0.01 0" rpy=" 1.57079 0 0" />
             <geometry>
-                <cylinder length="0.02" radius="0.01"/>
+                <cylinder length="0.02" radius="0.005"/>
             </geometry>
             <material name="blue"/>
         </visual>
         <collision>
-            <origin xyz="0.06 -0.06 0" rpy="0 0 0" />
+            <origin xyz="0.06 -0.06 0" rpy="1.57079  0 0" />
             <geometry>
-                <cylinder length="0.02" radius="0.01"/>
+                <cylinder length="0.02" radius="0.005"/>
             </geometry>
         </collision>
         <inertial>
@@ -73,16 +73,16 @@
 
     <link name="rigid-part-front-right">
         <visual>
-            <origin xyz="0.06 0.06 0" rpy="0 0 0" />
+            <origin xyz="0.01 -0.01 0" rpy="1.57079  0 0" />
             <geometry>
-                <cylinder length="0.02" radius="0.01"/>
+                <cylinder length="0.02" radius="0.005"/>
             </geometry>
             <material name="blue"/>
         </visual>
         <collision>
-            <origin xyz="0.06 0.06 0" rpy="0 0 0" />
+            <origin xyz="0.1 0.1 0" rpy="1.57079  0 0" />
             <geometry>
-                <cylinder length="0.02" radius="0.01"/>
+                <cylinder length="0.02" radius="0.005"/>
             </geometry>
         </collision>
         <inertial>
@@ -93,16 +93,16 @@
 
     <link name="rigid-part-back-left">
         <visual>
-            <origin xyz="-0.06 -0.06 0" rpy="0 0 0" />
+            <origin xyz="-0.01 -0.01 0" rpy="1.57079  0 0" />
             <geometry>
-                <cylinder length="0.02" radius="0.01"/>
+                <cylinder length="0.02" radius="0.005"/>
             </geometry>
             <material name="blue"/>
         </visual>
         <collision>
-            <origin xyz="-0.06 -0.06 0" rpy="0 0 0" />
+            <origin xyz="-0.01 -0.01 0" rpy="1.57079  0 0" />
             <geometry>
-                <cylinder length="0.02" radius="0.01"/>
+                <cylinder length="0.02" radius="0.005"/>
             </geometry>
         </collision>
         <inertial>
@@ -113,16 +113,16 @@
 
     <link name="rigid-part-back-right">
         <visual>
-            <origin xyz="-0.06 0.06 0" rpy="0 0 0" />
+            <origin xyz="-0.01 -0.01 0" rpy="1.57079  0 0" />
             <geometry>
-                <cylinder length="0.02" radius="0.01"/>
+                <cylinder length="0.02" radius="0.005"/>
             </geometry>
             <material name="blue"/>
         </visual>
         <collision>
-            <origin xyz="-0.06 0.06 0" rpy="0 0 0" />
+            <origin xyz="-0.06 0.06 0" rpy="1.57079  0 0" />
             <geometry>
-                <cylinder length="0.02" radius="0.01"/>
+                <cylinder length="0.02" radius="0.005"/>
             </geometry>
         </collision>
         <inertial>
@@ -134,12 +134,12 @@
     <!-- Soft body link attached to the chassis -->
     <link name="soft-leg-front-left">
         <fem>
-		    <origin xyz="0.06 -0.06 0" rpy="1.57079 0 0" />
+		    <origin xyz="0 0 0" rpy="1.57079 0 0" />
             <density value="1040"/>
             <youngs value="1.2e7"/>
             <poissons value="0.36"/>
             <damping value="0.0"/>
-            <attachDistance value="0.5"/>
+            <attachDistance value="0.2"/>
             <tetmesh filename="deneme.tet"/>
             <scale value="0.001"/>
         </fem>
@@ -148,12 +148,12 @@
     <!-- Soft body link attached to the chassis -->
     <link name="soft-leg-front-right">
         <fem>
-		    <origin xyz="0.06 0.085 0" rpy="1.57079 0 0" />
+		    <origin xyz="0 0 0" rpy="1.57079 0 0" />
             <density value="1040"/>
             <youngs value="1.2e7"/>
             <poissons value="0.36"/>
             <damping value="0.0"/>
-            <attachDistance value="0.5"/>
+            <attachDistance value="0.2"/>
             <tetmesh filename="deneme2.tet"/>
             <scale value="0.001"/>
         </fem>
@@ -162,12 +162,12 @@
         <!-- Soft body link attached to the chassis -->
     <link name="soft-leg-back-left">
         <fem>
-		    <origin xyz="-0.06 0.085 0" rpy="1.57079 0 0" />
+		    <origin xyz="0 0 0" rpy="1.57079 0 0" />
             <density value="1040"/>
             <youngs value="1.2e7"/>
             <poissons value="0.36"/>
             <damping value="0.0"/>
-            <attachDistance value="0.5"/>
+            <attachDistance value="0.2"/>
             <tetmesh filename="deneme3.tet"/>
             <scale value="0.001"/>
         </fem>
@@ -176,19 +176,19 @@
     <!-- Soft body link attached to the chassis -->
     <link name="soft-leg-back-right"> 
         <fem>
-		    <origin xyz="-0.06 -0.06 0" rpy="1.57079 0 0" />
+		    <origin xyz="0 0 0" rpy="1.57079 0 0" />
             <density value="1040"/>
             <youngs value="1.2e7"/>
             <poissons value="0.36"/>
             <damping value="0.0"/>
-            <attachDistance value="0.5"/>
+            <attachDistance value="0.2"/>
             <tetmesh filename="deneme4.tet"/>
             <scale value="0.001"/>
         </fem>
     </link>
 
     <!-- Joint connecting the base link to the chassis -->
-    <joint name="joint-base-chassis" type="continuous">
+    <joint name="joint-base-chassis" type="fixed">
         <parent link="base_link"/>
         <child link="chassis-link"/>
         <origin xyz="0 0 0" rpy="1.57079 0 0" />
@@ -199,7 +199,7 @@
     <joint name="joint-body-rigid-front-left" type="revolute">
         <parent link="chassis-link"/>
         <child link="rigid-part-front-left"/>
-        <origin xyz="0.06 -0.06 0" rpy="0 0 0" />
+        <origin xyz="0.04 -0.06 0" rpy="0 0 0" />
         <axis xyz="0 0 1" />
         <limit lower="-3.14" upper="3.14" effort="10" velocity="10"/>
     </joint>
@@ -207,7 +207,7 @@
     <joint name="joint-body-rigid-front-right" type="revolute">
         <parent link="chassis-link"/>
         <child link="rigid-part-front-right"/>
-        <origin xyz="0.06 0.06 0" rpy="0 0 0" />
+        <origin xyz="0.04 0.11 0" rpy="0 0 0" />
         <axis xyz="0 0 1" />
         <limit lower="-3.14" upper="3.14" effort="10" velocity="10"/>
     </joint>
@@ -215,7 +215,7 @@
     <joint name="joint-body-rigid-back-left" type="revolute">
         <parent link="chassis-link"/>
         <child link="rigid-part-back-left"/>
-        <origin xyz="-0.06 -0.06 0" rpy="0 0 0" />
+        <origin xyz="-0.08 -0.06 0" rpy="0 0 0" />
         <axis xyz="0 0 1" />
         <limit lower="-3.14" upper="3.14" effort="10" velocity="10"/>
     </joint>
@@ -223,48 +223,57 @@
     <joint name="joint-body-rigid-back-right" type="revolute">
         <parent link="chassis-link"/>
         <child link="rigid-part-back-right"/>
-        <origin xyz="-0.06 0.06 0" rpy="0 0 0" />
+        <origin xyz="-0.08 0.11 0" rpy="0 0 0" />
         <axis xyz="0 0 1" />
         <limit lower="-3.14" upper="3.14" effort="10" velocity="10"/>
     </joint>
 
     <!-- Rigid to joint for legs -->
 
-    <joint name="joint-rigid-front-left-leg" type="continuous">
+    <joint name="joint-rigid-front-left-leg" type="revolute">
         <parent link="rigid-part-front-left"/>
         <child link="soft-leg-front-left"/>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="0 0.02 0" rpy="0 0 0" />
         <axis xyz="0 1 0" />
         <limit lower="-1.57" upper="1.57" effort="1.0" velocity="0.5"/> 
     </joint>
 
         <!-- Joint connecting the rigid part to the front right leg -->
-    <joint name="joint-rigid-front-right-leg" type="continuous">
+    <joint name="joint-rigid-front-right-leg" type="revolute">
         <parent link="rigid-part-front-right"/>
         <child link="soft-leg-front-right"/>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="0 0.02 0" rpy="0 0 0" />
         <axis xyz="0 1 0" />
         <limit lower="-1.57" upper="1.57" effort="1.0" velocity="0.5"/> 
     </joint>
 
     <!-- Joint connecting the rigid part to the back left leg -->
-    <joint name="joint-rigid-back-left-leg" type="continuous">
+    <joint name="joint-rigid-back-left-leg" type="revolute">
         <parent link="rigid-part-back-left"/>
         <child link="soft-leg-back-left"/>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="0 0.02 0" rpy="0 0 0" />
         <axis xyz="0 1 0" />
         <limit lower="-1.57" upper="1.57" effort="1.0" velocity="0.5"/> 
     </joint>
 
     <!-- Joint connecting the rigid part to the back right leg -->
-    <joint name="joint-rigid-back-right-leg" type="continuous">
+    <joint name="joint-rigid-back-right-leg" type="revolute">
         <parent link="rigid-part-back-right"/>
         <child link="soft-leg-back-right"/>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="0 0.02 0" rpy="0 0 0" />
         <axis xyz="0 1 0" />
         <limit lower="-1.57" upper="1.57" effort="1.0" velocity="0.5"/> 
     </joint>
 
+
+	<!-- <joint name = "rail" type = "revolute">
+        <parent link="base_link"/>    
+        <child link="rigid-part-back-right"/>    
+        <origin xyz="0.0 0.0 0.0"/>    
+        <axis xyz="0 1 0"/>    
+        <limit lower="-2.0" upper="2.0"/>    
+        <dynamics damping="0.0" friction="0.0"/>  
+	</joint> -->
     <!-- Old stuff here -->
 <!-- 
     <joint name="joint-base-chassis" type="continuous">
@@ -285,6 +294,13 @@
 		<parent link="chassis-link"/>
 		<child link="soft-leg-front-right"/>
 		<origin xyz="0.06 0.065 0" rpy="0 0 0" />
+		<axis xyz="0 1 0" />
+	</joint>
+	
+	<joint name="joint-chassis-rare-right-wheel" type="continuous">
+		<parent link="chassis-link"/>
+		<child link="soft-leg-back-right"/>
+		<origin xyz="-0.06 0.065 0" rpy="0 0 0" />
 		<axis xyz="0 1 0" />
         <limit lower="-1.57" upper="1.57" effort="1.0" velocity="0.5"/> 
 
